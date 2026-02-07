@@ -5,13 +5,13 @@
 nouns = []
 adjectives = []
 
-with open('things.txt') as f:
+with open("things.txt") as f:
     # We don't want those stinky \n newline characters
     # so we call strip() before adding it to our nouns list.
     for line in f:
         nouns.append(line.strip())
 
-with open('descriptors.txt') as f:
+with open("descriptors.txt") as f:
     for line in f:
         adjectives.append(line.strip())
 
@@ -27,16 +27,16 @@ def generate_costume():
 
 
 while True:
-    (noun, adjective) = generate_costume()
+    noun, adjective = generate_costume()
 
-    print "You go dressed as a {} {} to the party."
+    print("You go dressed as a {} {} to the party.")
 
-    happy = raw_input("Are you happy with this choice? ")
+    happy = input("Are you happy with this choice? ")
 
     # Check if the user typed something like 'yes' or 'y' and
     # quit the program if they are happy.
     if happy == True:
         exit()
     else:
-        print "OK, I will choose another costume. Hold on..."
-        print
+        print("OK, I will choose another costume. Hold on...")
+        print()
